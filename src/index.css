@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+:root {
+  --COLOR-GRAY: #333333;
+  --COLOR-GRAY-DARK: #222222;
+  --COLOR-GRAY-LIGHT: #cccccc;
+  --COLOR-ONGOING: #98c1d9;
+  --COLOR-DONE: #ee6c4d;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* styles for column */
+.column {
+  background: var(--COLOR-GRAY-DARK);
+  min-height: 20rem;
+  color: #fff;
+  width: 33%;
+  max-width: 20rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  padding: 0.5rem;
+  border: dashed transparent 4px;
+}
+
+.column.drop {
+  border-color: white;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleWrapper button {
+  all: unset;
+  color: black;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.titleWrapper button:hover {
+  background: var(--COLOR-GRAY-LIGHT);
+}
+
+.Modal {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalContent {
+  background: white;
+  position: absolute;
+  z-index: 1;
+  padding: 1rem;
+  height: 5rem;
+  width: 20rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+/* style for task */
+
+.task {
+  background: white;
+  border-radius: 4px;
+  min-height: 5rem;
+  color: black;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  cursor: move;
+}
+
+.bottomWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status {
+  font-size: small;
+  background: var(--COLOR-GRAY-LIGHT);
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.ONGOING {
+  background: var(--COLOR-ONGOING);
+}
+
+.COMPLETED {
+  background: var(--COLOR-DONE);
+}
+
+.task img {
+  height: 1.25rem;
+  cursor: pointer;
+}

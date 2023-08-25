@@ -1,4 +1,5 @@
 .App {
+  padding-top: 50px;
   background: var(--COLOR-GRAY);
   min-height: 100vh;
   display: flex;
